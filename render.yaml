@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: discord-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: DISCORD_TOKEN
+        value: your_discord_token_here
+      - key: NOTIFY_CHANNEL_ID
+        value: 1390595136798326886  # 通知を送るチャンネルID
